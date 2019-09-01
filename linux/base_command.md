@@ -28,7 +28,7 @@
 
       grep "Failed password for root" /var/log/auth.log | awk '{print $11}' | sort | uniq -c | sort -nr | more
 
-- rtmp直播流合并成视频文件
+#### rtmp直播流合并成视频文件
 
       rtmpdump -v -r rtmp://vba05ca49.live.126.net/live/39909b31438e4e03b8ec5420fcaf1a05
 
