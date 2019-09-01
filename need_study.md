@@ -1,0 +1,17 @@
+## 待研究
+- gevent
+- greenlet
+- grequest
+- wsgi
+- python
+- redis
+- mongo
+- mysql innodb   MyISAM
+- flask
+- go
+- linux
+- docker
+- Elasticsearch
+- Fabric 穿越跳板机
+- kafka
+- gitlab-ci or Jenkins  自动化部署

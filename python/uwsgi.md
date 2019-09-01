@@ -1,0 +1,15 @@
+## uwsgi
+nginx 负责将从某接口A收到的请求转发到另一些接口B
+
+uWSGI 负责开多个进程监听接口B的请求，之后发到Flask服务进行处理
+
+uWSGI配置好gevent携程
+
+supervisor负责自动开启uWSGI服务
+
+uWSGI和Gunicorn都是实现了WSGI server协议的服务器，
+Django，Flask是实现了WSGI application协议的web框架
+
+uWSGI服务器自己实现了基于uwsgi协议的server部分，我们只需要在uwsgi的配置文件中指定application的地址，uWSGI就能直接和应用框架中的WSGI application通信。
+
+uwsgi：与WSGI一样是一种通信协议，是uWSGI服务器的独占协议
