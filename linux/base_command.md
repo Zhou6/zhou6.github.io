@@ -40,4 +40,6 @@
      cat /proc/PID/status
 #### 搜索包
     apt-cache search ‘package’
+#### 创建虚拟环境并指定PYTHON版本
+    virtualenv venv --python=python3.6
 
