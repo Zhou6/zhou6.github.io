@@ -62,7 +62,7 @@ ImportError:'_ctypes'
 ModuleNotFoundError: No module named '_ctypes’的解决办法：
     
     apt-get install libffi-dev
-    
+- 安装完成测试一下，import ssl是否能成功，否则就是上面那些包没装好
 - whereis python3.7
 - 添加python3的软链接 
 
