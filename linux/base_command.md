@@ -42,4 +42,6 @@
     apt-cache search ‘package’
 #### 创建虚拟环境并指定PYTHON版本
     virtualenv venv --python=python3.6
+#### 批量kill pid
+    ps -ef|grep 'Split'|grep -v grep| awk '{print $2}'|xargs kill -9
 
