@@ -45,3 +45,7 @@
 #### 批量kill pid
     ps -ef|grep '$进程名'|grep -v grep| awk '{print $2}'|xargs kill -9
 
+#### 绑定目录
+    绑定挂载的一个非常有用的 case 是解决当前磁盘空间不足的问题。比如由于日志文件的不断增长，当前磁盘容量不够了，那就新添加一块磁盘，然后通过绑定挂载把日志目录移到新的磁盘
+    mount --bind 你的文件夹 /data   # /data文件夹下就会出现log文件夹里的所有文件
+    unmount /data    # 解除绑定
