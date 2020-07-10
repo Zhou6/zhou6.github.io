@@ -23,4 +23,4 @@
 但是经过测试发现ujson.dumps({}, **args)的args不支持里面的值为None，会报错：
     
     TypeError: an integer is required (got type NoneType)
-所以如果想要猴子补丁的话，可以先保证安装simplejson，让falsk内部使用simplejson，外部自己的代码使用ujson，或者直接全部猴子补丁成simplejson也可以
+所以如果想要猴子补丁的话，可以先保证安装simplejson，让flask内部使用simplejson，外部自己的代码使用ujson，或者直接全部猴子补丁成simplejson也可以
