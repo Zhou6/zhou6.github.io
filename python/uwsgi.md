@@ -3,7 +3,7 @@ nginx 负责将从某接口A收到的请求转发到另一些接口B
 
 uWSGI 负责开多个进程监听接口B的请求，之后发到Flask服务进行处理
 
-uWSGI配置好gevent携程
+uWSGI配置好gevent协程
 
 supervisor负责自动开启uWSGI服务
 
