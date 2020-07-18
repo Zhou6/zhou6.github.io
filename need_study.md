@@ -1,13 +1,12 @@
 ## 待研究
-- gevent
-- greenlet
-- grequest
-- wsgi
+- gevent greenlet,明白协程的真正用在什么地方，数据库io访问时是否有协程，会自己手动实现协程利用yield
+- flask 通读源码， （Werkzeug - uWSGI server实现逻辑）
+- grequest  已看，利用gevent协程实现异步requests请求
+- wsgi （探查uwsgi开启多线程导致进程僵死问题）， Gunicorn
 - python
 - redis
 - mongo
 - mysql innodb   MyISAM
-- flask
 - go
 - linux
 - docker
@@ -15,3 +14,5 @@
 - Fabric 穿越跳板机
 - kafka
 - gitlab-ci or Jenkins  自动化部署
+- requests源码
+- logger
