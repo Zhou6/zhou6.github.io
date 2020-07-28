@@ -1,6 +1,6 @@
 ## docker容器基本使用
 - docker info    # 查看docker信息
-- docker run -i -t ubuntu /bin/bash   # 使用ubuntu镜像创建新容器，并执行/bin/bash命令，且进行交互
+- docker run -i -t ubuntu /bin/bash   # 使用ubuntu镜像创建新容器，并执行/bin/bash命令，且进行交互。如果ubuntu不在本地，会先远程下载该镜像
 - docker ps -a    # 查看所有已有容器，不带-a则只展示正在进行等起
 - docker ps -n 10    # 展示最后10个容器，无论状态
 - docker --name my_container -i -t ubuntu /bin/bash    # 创建守护式新容器并命名
@@ -25,3 +25,16 @@
   - docker rm ‘docker ps -a -q’  # 删除所有容器
   
 ## docker镜像
+- docker images    # 列出本地镜像，本地镜像存在/var/lig/docker
+- docker pull ubuntu  # 远程拉取ubuntu镜像到本地,默认拉取lastest版本
+- docker search python  # 远程搜索python相关镜像
+- 构建自己的镜像 两种方式，1.推荐：dockerfile  2.不推荐 docker commit
+  
+  创建dockerFile
+  ```
+  FROM ubuntu
+  RUN apt-get update
+  RUN apt-get install -y nginx
+  RUN echo 'HI' > /usr/share/nginx/html/index.html
+  EXPOSE 80
+  ```
