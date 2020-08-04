@@ -38,7 +38,7 @@
   RUN echo 'HI' > /usr/share/nginx/html/index.html
   EXPOSE 80
   ```
-- cd my_project; docker build -t='z/test' .     # 创建自己的镜像， -t：设置镜像仓库和名称， ”.“ 是让docker去my_project自动寻找dockerFile文件，也可以指定
+- cd my_project; docker build -t='z/test' .     # 创建自己的镜像， -t：设置镜像仓库和名称， ”.“ 表示在当前目录自动寻找dockerFile文件，也可以指定目录
 - docker history z/test    # 查看镜像构建历史
 - docker run -d -p 80 --name my_nginx z/test nginx -g "daemon off;"    # 创建守护容器并前台启动nginx，并放开容器80端口
   通过"docker ps"或者 "docker port my_nginx"可看到PORTS对应宿主端口为32768。访问http://127.0.0.1:32768/, 可以看到nginx默认页
