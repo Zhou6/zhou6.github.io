@@ -6,6 +6,7 @@
 - docker --name my_container -i -t ubuntu /bin/bash    # 创建守护式新容器并命名
 - docker start my_container    # 启动my_container容器，但并没有交互， my_container也可以替换为容器唯一id
 - docker attach my_container    # 附着到已启动的my_container容器，可以进行交互
+- docker exec -i -t my_container bash  # 以bash命令附着到已启动的my_container容器进行交互
 - docker run --name daemon_z -d ubuntu /bin/sh -c "while true;do echo hello;sleep 5;done"    # 使用ubuntu镜像创建并在后台运行daemon_z容器，并执行脚本
 - docker logs daemon_z    # 查看daemon_z容器log
   - docker logs -f daemon_z    # 类似tail -f
