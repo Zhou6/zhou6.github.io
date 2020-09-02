@@ -13,13 +13,13 @@ class WxWorkMsg(BaseDynamicDocument):
 
 class WxWork:
     CORP_ID = ''
-    PRI_KEY = “”
-    CHAT_SECRET = ‘’
+    PRI_KEY = ''
+    CHAT_SECRET = ''
     
     @classmethod
     def sync_msg(cls, seq=None):
         """企业微信会话存档内容同步"""
-        dll = ctypes.cdll.LoadLibrary(os.getcwd() + "/utils/libWeWorkFinanceSdk_C.so")
+        dll = ctypes.cdll.LoadLibrary(os.getcwd() + "/libWeWorkFinanceSdk_C.so")  # 真实libWeWorkFinanceSdk_C位置
         new_sdk = dll.NewSdk()
         result = dll.Init(new_sdk, cls.CORP_ID.encode(), cls.CHAT_SECRET.encode())
         if result != 0:
