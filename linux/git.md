@@ -17,6 +17,11 @@
         8. git rebase —continue
         9. 循环5.6.7 直至没有冲突
         10. git push -force   此命令万分小心，最好提前分出一个备用分支，防止push出错
+- 合并所有提交为一条，且没有前序提交记录
+        
+        方法1: git rebase -i --root
+        方法2：git reset --soft HEAD~5  # 5：需要合并多少条提交，就改成多少
+              git commit --amend    # --amend仅会显示第一次提交的消息以供编辑
 - 显示所有远程分支
         
         git branch -r 
@@ -38,13 +43,11 @@
         git log 
         git log -2 看最近两条提交
         强制恢复和远程分支一致的位置
-        git reset —hard origin/my_branch
+        git reset -—hard origin/my_branch
         强制恢复到某一位置
-        git reset —hard 261accd4a
-- 查看远程分支
-     
-        git branch -ｒ
+        git reset —-hard 261accd4a
 - 删除远程分支
         
         git branch -r -d origin/branch-name
         git push origin :branch-name
+
