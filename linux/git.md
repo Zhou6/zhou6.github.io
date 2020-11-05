@@ -50,4 +50,8 @@
         
         git branch -r -d origin/branch-name
         git push origin :branch-name
-
+- 打标签
+   
+        git tag 1.2.2   #  打本地tag
+        git push origin 1.2.2  # 推送tag到远端
+        git tag -d 1.2.2  # 删除本地tag
