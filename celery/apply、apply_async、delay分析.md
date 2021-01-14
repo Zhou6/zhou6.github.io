@@ -57,6 +57,8 @@
       )
   ```
   从app.send_task()开始经过一系列的流程（代码较多，不再往上粘贴），把task对应方法、参数、任务id、其他配置等包到一起组成一个message实例，最终到达使用的broker(redis)的_put，代码如下：
+  
+  注：延时参数countdown和eta最终都会换算为eta格式，即需要运行的真正时间点，随其他数据放入message
   ```angular2
   def _put(self, queue, message, **kwargs):
       """Deliver message."""
