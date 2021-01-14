@@ -1,4 +1,4 @@
-## celery发送任务apply、apply_async、delay分析
+## celery发送任务(apply、apply_async、delay)分析
 - apply: 
    
     官方注释：Execute this task locally, by blocking until the task returns（通过阻塞直到任务返回，在本地执行此任务）
