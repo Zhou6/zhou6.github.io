@@ -9,3 +9,4 @@
 - 内存
 - gdb调试
 - 字节、字符
+- python内存池（memory pool）
