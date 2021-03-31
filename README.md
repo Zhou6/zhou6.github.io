@@ -8,5 +8,10 @@
 - cpu
 - 内存
 - gdb调试
-- 字节、字符
+  - https://mozillazg.com/2017/07/debug-running-python-process-with-gdb.html
+  - https://meteorix.github.io/2019/02/13/gdbpython/
+  - https://github.com/cyrus-and/gdb-dashboard
+  - https://wizardforcel.gitbooks.io/100-gdb-tips/content/index.html
+  - https://confluence.desy.de/display/FSEC/Debugging+Python
+- 字节、字符、bit
 - python内存池（memory pool）
